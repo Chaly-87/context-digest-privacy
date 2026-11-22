@@ -1,0 +1,485 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-yfphnvi3> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy — Context Digest</title><meta name="description" content="What the Context Digest Jira app reads, how it uses that data, what it keeps and for how long."><link rel="canonical" href="https://chaly-87.github.io/context-digest-privacy/privacy/"><meta name="robots" content="index,follow"><style>:root{color-scheme:light dark;--bg: #ffffff;--fg: #14161a;--line: #c3ccd5;--link: #0b4f9c;--rule: #d7dee5}@media(prefers-color-scheme:dark){:root{--bg: #0f1216;--fg: #e9eef4;--line: #3b4650;--link: #8ec2ff;--rule: #2c353e}}body{margin:0 auto;max-width:46rem;padding:2.5rem 1.25rem 4rem;font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}nav[data-astro-cid-yfphnvi3] a[data-astro-cid-yfphnvi3],article[data-astro-cid-yfphnvi3] a{color:var(--link);text-underline-offset:.15em}nav[data-astro-cid-yfphnvi3] a[data-astro-cid-yfphnvi3]:focus-visible,article[data-astro-cid-yfphnvi3] a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}nav[data-astro-cid-yfphnvi3]{margin-bottom:2rem;font-size:.9rem}nav[data-astro-cid-yfphnvi3] a[data-astro-cid-yfphnvi3]{display:inline-block;padding:.7rem .4rem;margin-right:.25rem}article[data-astro-cid-yfphnvi3] h1{font-size:1.9rem;line-height:1.2;margin:0 0 1.5rem}article[data-astro-cid-yfphnvi3] h2{font-size:1.2rem;line-height:1.3;margin:2.25rem 0 .5rem}article[data-astro-cid-yfphnvi3] p,article[data-astro-cid-yfphnvi3] li{margin:.6rem 0}article[data-astro-cid-yfphnvi3] table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.94rem}article[data-astro-cid-yfphnvi3] th,article[data-astro-cid-yfphnvi3] td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top;overflow-wrap:anywhere;hyphens:auto}article[data-astro-cid-yfphnvi3] th{background:color-mix(in srgb,var(--fg) 6%,transparent)}article[data-astro-cid-yfphnvi3] code{font-size:.9em}article[data-astro-cid-yfphnvi3] hr{margin:3rem 0;border:0;border-top:1px solid var(--rule)}article[data-astro-cid-yfphnvi3] a{overflow-wrap:anywhere}@media(max-width:30rem){body{padding:1.5rem 1rem 3rem}article[data-astro-cid-yfphnvi3] table{font-size:.88rem}article[data-astro-cid-yfphnvi3] th,article[data-astro-cid-yfphnvi3] td{padding:.35rem .4rem}}
+</style></head> <body data-astro-cid-yfphnvi3> <nav aria-label="Language" data-astro-cid-yfphnvi3> <a href="#en" hreflang="en" data-astro-cid-yfphnvi3>English</a> <span aria-hidden="true" data-astro-cid-yfphnvi3>·</span> <a href="#pt" hreflang="pt-PT" data-astro-cid-yfphnvi3>Português</a> </nav> <main data-astro-cid-yfphnvi3> <article id="en" lang="en" data-astro-cid-yfphnvi3> <h1 id="privacy-policy--context-digest">Privacy Policy — Context Digest</h1>
+<p><strong>Effective date:</strong> 22 November 2026</p>
+<p>Context Digest is a Jira app built on Atlassian Forge. It is provided by <strong>Lumia Pro AI</strong>, the
+project of <strong>Hugo Miguel Morais Lopes</strong>, an independent developer based in Portugal (“we”, “us”).
+Contact: <strong><a href="mailto:comercial@lumiaproai.com">comercial@lumiaproai.com</a></strong>.</p>
+<p>This policy describes how the app actually behaves: what it reads, what it does with that data,
+what it keeps and for how long, and where responsibility sits. It covers the app only. Your
+organisation’s use of Jira, Rovo and the Atlassian platform is governed by Atlassian’s own terms
+and privacy policy (<a href="https://www.atlassian.com/legal/privacy-policy">https://www.atlassian.com/legal/privacy-policy</a>).</p>
+<h2 id="1-when-this-policy-applies">1. When this policy applies</h2>
+<p>It applies when Context Digest is installed on a Jira Cloud site and used in any of three ways:</p>
+<ul>
+<li>the <strong>Context Digest panel</strong> inside a Jira issue;</li>
+<li>the <strong>Context Digest agent</strong> in Rovo, where your site has Rovo enabled;</li>
+<li>the <strong><code>get-context</code> action</strong>, when another agent invokes it as a tool.</li>
+</ul>
+<p>If you use Jira but are not a site administrator, your administrator decides whether the app is
+installed and can remove it at any time.</p>
+<h2 id="2-what-the-app-reads">2. What the app reads</h2>
+<p>The app requests a <strong>single permission</strong>: <code>read:jira-work</code>. It cannot create, edit, transition,
+comment on, or delete anything in Jira.</p>
+<p>It authenticates <strong>as the app itself</strong>, not as you. It does not read your account, email address,
+profile, or anything you can see but the app cannot.</p>
+<p>For the project of the issue you have open — or the project key supplied to the agent — it reads
+the following fields of <strong>open issues</strong> (<code>resolution = Unresolved</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Example</th>
+<th>Why it is read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Issue key</td>
+<td><code>MOBL-37</code></td>
+<td>identify the item in lists</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>“Checkout fails on iOS”</td>
+<td>show what the item is</td>
+</tr>
+<tr>
+<td>Status name and status category</td>
+<td>“In Progress” / “In Progress”</td>
+<td>show where it stands; exclude completed work</td>
+</tr>
+<tr>
+<td>Priority name</td>
+<td>“Highest”</td>
+<td>classify as blocking</td>
+</tr>
+<tr>
+<td>Assignee display name</td>
+<td>“Ana Silva”</td>
+<td>show who owns it, or that nobody does</td>
+</tr>
+<tr>
+<td>Last-updated date</td>
+<td>2 March 2024</td>
+<td>compute age in days and staleness</td>
+</tr>
+</tbody>
+</table>
+<p>It reads <strong>at most 1,000 issues</strong> per request (10 pages of 100). It does not read descriptions,
+comments, attachments, worklogs, custom fields, email addresses, or any other Atlassian product
+(Confluence, Bitbucket, Jira Service Management). It calls no service outside Atlassian.</p>
+<p>The digest is rendered inside the issue you already have open, so only people who can already see
+that issue in Jira see it. The app does not widen anyone’s access to Jira content.</p>
+<h2 id="3-what-the-app-does-with-it">3. What the app does with it</h2>
+<p>In memory, it computes:</p>
+<ul>
+<li>how many open issues are blocking, unassigned, or stale (not updated for 14 days by default);</li>
+<li>the oldest items in each group, with status, owner and age in days;</li>
+<li>a one-sentence headline summarising the counts.</li>
+</ul>
+<p>That result is returned to the Jira issue panel, or to the Rovo agent that requested it. The app
+does not build profiles of people, score individuals, or make automated decisions about anyone.
+“Blocking” and “stale” describe <strong>work items</strong>, not the people assigned to them.</p>
+<h2 id="4-where-the-data-goes">4. Where the data goes</h2>
+<p>The app runs entirely inside <strong>Atlassian Forge</strong>, on Atlassian’s infrastructure. We operate no
+servers of our own. The app makes <strong>no outbound network calls</strong> to external services and uses no
+analytics, advertising SDKs, error-tracking service, or third-party libraries beyond Atlassian’s
+Forge packages and React.</p>
+<p>Data reaches your browser only to render the panel inside Jira.</p>
+<h2 id="5-temporary-in-memory-cache">5. Temporary in-memory cache</h2>
+<p>To avoid re-reading Jira on every panel refresh, the app caches each computed digest <strong>in the
+memory of the Forge function instance that produced it</strong>:</p>
+<ul>
+<li>keyed by <strong>installation</strong>, project key and staleness threshold;</li>
+<li>each entry lives at most <strong>60 seconds</strong>; the instance holds at most <strong>50 entries</strong>;</li>
+<li>it is <strong>never written to Atlassian storage, a database, or disk</strong>;</li>
+<li>it is discarded when it expires or when the runtime recycles the instance;</li>
+<li>if the installation cannot be identified, <strong>no cache entry is read or written</strong> (the app fails
+closed), so two sites with the same project key can never share a digest.</li>
+</ul>
+<p>Because a cached entry holds summaries and assignee display names, it contains personal data for
+those 60 seconds — only in the memory of that installation’s own function instance.</p>
+<h2 id="6-diagnostic-logs">6. Diagnostic logs</h2>
+<p>The app writes short, structured log lines through Atlassian’s Forge logging. Each line records:</p>
+<ul>
+<li>the event — digest served, action invoked, or a failure;</li>
+<li>the entry point — <code>panel</code> or <code>rovo</code>;</li>
+<li>a <strong>hashed installation identifier</strong> — the first 12 hexadecimal characters of a SHA-256 hash of
+the site’s cloud ID (not the raw ID);</li>
+<li>the Jira <strong>project key</strong> (for example <code>MOBL</code>);</li>
+<li>pages read, totals counted, and whether the read was complete;</li>
+<li>on failure, a reason code and the <em>names</em> of the context fields present — never their values.</li>
+</ul>
+<p>The app <strong>never logs</strong> issue keys, summaries, assignee names, email addresses, the raw cloud ID,
+tokens, or request contents.</p>
+<p>Atlassian stores these logs and makes them available to the app’s developers for troubleshooting;
+site administrators can download them. Atlassian currently retains developer-console logs for
+30 days. We do not copy them into any system of our own.</p>
+<h2 id="7-rovo-and-atlassian-ai-features">7. Rovo and Atlassian AI features</h2>
+<p>The agent path is optional and exists only where your site has Rovo enabled.</p>
+<p>When you use the Context Digest agent, your message is handled by Atlassian Rovo. The app’s action
+returns the digest — issue keys, summaries, statuses, assignee display names and ages — into that
+conversation so the agent can answer with real numbers. That content is then processed by
+Atlassian’s AI features under <strong>Atlassian’s terms and privacy policy</strong>. The app sends nothing to
+Rovo on its own: the agent calls the action in response to a request.</p>
+<p>Where Rovo is unavailable or disabled, this section does not apply and the issue panel works
+exactly the same without it.</p>
+<h2 id="8-personal-data-and-responsibility">8. Personal data and responsibility</h2>
+<p>The app can process personal data:</p>
+<ul>
+<li><strong>assignee display names</strong> — personal data about your colleagues;</li>
+<li><strong>issue summaries and statuses</strong> — which may contain personal data if your team writes it there;</li>
+<li><strong>project key and hashed installation identifier</strong> — identify a workspace rather than a person.</li>
+</ul>
+<p>How responsibility works in practice:</p>
+<ul>
+<li><strong>Your organisation</strong> — the site administrator who installs the app — controls the Jira content
+and decides why and how it is used. It remains the party responsible for that content.</li>
+<li><strong>We</strong> read and summarise the project only to provide the feature the administrator installed,
+and we do not decide the purposes or means of your organisation’s Jira content.</li>
+<li><strong>We</strong> are responsible for the diagnostic logs described in section 6, which exist to operate,
+secure and troubleshoot the app.</li>
+</ul>
+<p>We do not sell personal data, share it with advertisers or data brokers, or use it to train
+machine-learning models.</p>
+<h2 id="9-legal-bases">9. Legal bases</h2>
+<p>Where the GDPR applies:</p>
+<ul>
+<li><strong>Jira content</strong> (sections 2, 3, 5): the organisation that installs the app determines the
+purposes and means of its Jira data, and its own legal basis under Article 6 applies. We process
+that content only on its instruction, to provide the panel and agent answers it enabled; in that
+respect we do not set the purposes of that processing.</li>
+<li><strong>Diagnostic logs</strong> (section 6): Article 6(1)(f) — our legitimate interests in operating,
+securing and troubleshooting the app. The logs contain no issue content, no names and only a
+hashed installation identifier, which is why we consider those interests are not overridden by
+your rights and freedoms. You may object to this processing (section 13).</li>
+</ul>
+<h2 id="10-international-transfers-and-where-processing-happens">10. International transfers and where processing happens</h2>
+<p>The app itself does not send data to a third country or to any service of ours: it runs inside
+Forge, calls only Jira APIs on the same Atlassian platform, and holds data only in memory for 60
+seconds. We operate no servers, have no remote backend, and use no external sub-processors.</p>
+<p>How Atlassian processes data at platform level is outside our control, and we do not restate it as
+our own commitment. Atlassian states that:</p>
+<ul>
+<li>Forge platform processing is covered by the <strong>Forge Data Processing Addendum</strong>, which
+incorporates the EU Standard Contractual Clauses and relies on the EU-U.S. Data Privacy
+Framework where applicable;</li>
+<li>processing locations and transfer impact assessments are documented by Atlassian itself.</li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://developer.atlassian.com/platform/forge/about-the-forge-data-processing-addendum">https://developer.atlassian.com/platform/forge/about-the-forge-data-processing-addendum</a></li>
+<li><a href="https://www.atlassian.com/legal/data-processing-addendum">https://www.atlassian.com/legal/data-processing-addendum</a></li>
+</ul>
+<p>The app uses <strong>no persistent Forge hosted storage</strong>, so Atlassian’s data-residency pinning — which
+applies to that storage — has nothing to pin in this app: apart from the 60-second in-memory cache,
+the app keeps no data at all.</p>
+<h2 id="11-retention">11. Retention</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Retention</th>
+<th>Who controls it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computed digest in memory</td>
+<td>at most 60 seconds, per installation</td>
+<td>us — fixed in the app’s code</td>
+</tr>
+<tr>
+<td>Diagnostic logs</td>
+<td>Atlassian documents that app logs are available in the developer console for the past 30 days; Atlassian sets and may change that period</td>
+<td>Atlassian</td>
+</tr>
+<tr>
+<td>Anything else</td>
+<td>not stored — the app has no database, object storage or key-value store</td>
+<td>us — there is nothing to retain</td>
+</tr>
+</tbody>
+</table>
+<p>We do not copy the logs into any system of our own, so their retention is whatever Atlassian
+applies to the Forge platform. Uninstalling the app stops new processing; the in-memory cache
+expires on its own and the app holds nothing else.</p>
+<h2 id="12-security">12. Security</h2>
+<ul>
+<li>one read-only permission (<code>read:jira-work</code>), with no write capability of any kind;</li>
+<li>per-installation cache partitioning that fails closed rather than risk mixing organisations;</li>
+<li>hashed installation identifiers in logs, and no content logged;</li>
+<li>no credentials, API keys or secrets stored in the app;</li>
+<li>no data storage to secure, because none is used.</li>
+</ul>
+<p>No system is perfectly secure. If you believe you have found a security issue, please contact us
+at the address below before disclosing it publicly.</p>
+<h2 id="13-your-rights">13. Your rights</h2>
+<p>Subject to applicable law, you may request access to, correction of, or deletion of your personal
+data, restrict or object to its processing, or ask for portability. Write to
+<strong><a href="mailto:comercial@lumiaproai.com">comercial@lumiaproai.com</a></strong>.</p>
+<p>Two practical notes: requests about <strong>Jira content</strong> (summaries, assignments) are usually best
+addressed to your <strong>site administrator</strong>, who controls that content; and if you are in the EEA or
+UK you may also complain to your supervisory authority (in Portugal, the CNPD —
+<a href="https://www.cnpd.pt">www.cnpd.pt</a>).</p>
+<h2 id="14-children">14. Children</h2>
+<p>Context Digest is a business tool for software teams. It is not directed at children, and we do
+not knowingly process children’s data.</p>
+<h2 id="15-changes-to-this-policy">15. Changes to this policy</h2>
+<p>If the app’s behaviour changes, we will update this page and its effective date. Material changes
+will be announced here before they take effect.</p>
+<h2 id="16-contact">16. Contact</h2>
+<p><strong>Lumia Pro AI</strong> — project of Hugo Miguel Morais Lopes
+Email: <strong><a href="mailto:comercial@lumiaproai.com">comercial@lumiaproai.com</a></strong></p>
+<hr>
+<p><em>Context Digest is an app for Atlassian Jira, built on Atlassian Forge. Atlassian, Jira and Rovo are
+trademarks of Atlassian Pty Ltd. This policy covers the app only; your use of Jira and Rovo is also
+governed by Atlassian’s own terms and privacy policy.</em></p> </article> <hr data-astro-cid-yfphnvi3> <article id="pt" lang="pt-PT" data-astro-cid-yfphnvi3> <h1 id="política-de-privacidade--context-digest">Política de Privacidade — Context Digest</h1>
+<p><strong>Data de entrada em vigor:</strong> 22 de novembro de 2026</p>
+<p>O Context Digest é uma aplicação para Jira construída em Atlassian Forge. É disponibilizada pela
+<strong>Lumia Pro AI</strong>, projeto de <strong>Hugo Miguel Morais Lopes</strong>, programador independente sediado em
+Portugal («nós»). Contacto: <strong><a href="mailto:comercial@lumiaproai.com">comercial@lumiaproai.com</a></strong>.</p>
+<p>Esta política descreve o comportamento real da aplicação: o que lê, o que faz com esses dados, o
+que conserva e por quanto tempo, e onde está a responsabilidade. Aplica-se apenas à aplicação. A
+utilização do Jira, do Rovo e da plataforma Atlassian pela sua organização é regida pelos termos e
+pela política de privacidade da Atlassian (<a href="https://www.atlassian.com/legal/privacy-policy">https://www.atlassian.com/legal/privacy-policy</a>).</p>
+<h2 id="1-quando-se-aplica">1. Quando se aplica</h2>
+<p>Aplica-se quando o Context Digest está instalado num site Jira Cloud e é utilizado de uma de três
+formas:</p>
+<ul>
+<li>o <strong>painel Context Digest</strong> dentro de um issue do Jira;</li>
+<li>o <strong>agente Context Digest</strong> no Rovo, nos sites onde o Rovo está ativo;</li>
+<li>a <strong>ação <code>get-context</code></strong>, quando outro agente a invoca como ferramenta.</li>
+</ul>
+<p>Se utiliza o Jira mas não é administrador do site, é o seu administrador que decide se a aplicação
+está instalada e que a pode remover em qualquer momento.</p>
+<h2 id="2-o-que-a-aplicação-lê">2. O que a aplicação lê</h2>
+<p>A aplicação pede <strong>uma única permissão</strong>: <code>read:jira-work</code>. Não pode criar, editar, transitar,
+comentar ou apagar nada no Jira.</p>
+<p>Autentica-se <strong>como a própria aplicação</strong>, não como o utilizador. Não lê a sua conta, o seu email,
+o seu perfil, nem nada que esteja visível para si e não esteja acessível à aplicação.</p>
+<p>Para o projeto do issue que tem aberto — ou para a chave de projeto fornecida ao agente — lê os
+seguintes campos dos <strong>issues em aberto</strong> (<code>resolution = Unresolved</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Exemplo</th>
+<th>Para que é lido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chave do issue</td>
+<td><code>MOBL-37</code></td>
+<td>identificar o item nas listas</td>
+</tr>
+<tr>
+<td>Resumo</td>
+<td>«Checkout falha no iOS»</td>
+<td>mostrar do que se trata</td>
+</tr>
+<tr>
+<td>Nome e categoria do estado</td>
+<td>«Em curso» / «Em curso»</td>
+<td>mostrar a situação; excluir trabalho concluído</td>
+</tr>
+<tr>
+<td>Nome da prioridade</td>
+<td>«Highest»</td>
+<td>classificar como bloqueador</td>
+</tr>
+<tr>
+<td>Nome de apresentação do responsável</td>
+<td>«Ana Silva»</td>
+<td>mostrar quem é responsável, ou que ninguém é</td>
+</tr>
+<tr>
+<td>Data da última atualização</td>
+<td>2 de março de 2024</td>
+<td>calcular idade em dias e antiguidade</td>
+</tr>
+</tbody>
+</table>
+<p>Lê no máximo <strong>1 000 issues</strong> por pedido (10 páginas de 100). Não lê descrições, comentários,
+anexos, registos de trabalho, campos personalizados, endereços de email, nem qualquer outro produto
+Atlassian (Confluence, Bitbucket, Jira Service Management). Não contacta nenhum serviço fora da
+Atlassian.</p>
+<p>O digest é apresentado dentro do issue que já tem aberto, pelo que só o vê quem já consegue ver
+esse issue no Jira. A aplicação não alarga o acesso de ninguém ao conteúdo do Jira.</p>
+<h2 id="3-o-que-a-aplicação-faz-com-esses-dados">3. O que a aplicação faz com esses dados</h2>
+<p>Em memória, calcula:</p>
+<ul>
+<li>quantos issues em aberto são bloqueadores, não têm responsável, ou estão estagnados (sem
+atualização há 14 dias, por omissão);</li>
+<li>os itens mais antigos de cada grupo, com estado, responsável e idade em dias;</li>
+<li>uma frase de resumo com as contagens.</li>
+</ul>
+<p>Esse resultado é devolvido ao painel do issue, ou ao agente Rovo que o pediu. A aplicação não cria
+perfis de pessoas, não avalia indivíduos e não toma decisões automatizadas sobre ninguém.
+«Bloqueador» e «estagnado» descrevem <strong>itens de trabalho</strong>, não as pessoas a quem estão atribuídos.</p>
+<h2 id="4-para-onde-vão-os-dados">4. Para onde vão os dados</h2>
+<p>A aplicação corre inteiramente dentro do <strong>Atlassian Forge</strong>, na infraestrutura da Atlassian. Não
+operamos servidores próprios. A aplicação <strong>não faz chamadas de rede</strong> para serviços externos e não
+usa analítica, SDKs publicitários, serviços de monitorização de erros, nem bibliotecas de terceiros
+além dos pacotes Forge da Atlassian e do React.</p>
+<p>Os dados chegam ao seu browser apenas para renderizar o painel dentro do Jira.</p>
+<h2 id="5-cache-temporária-em-memória">5. Cache temporária em memória</h2>
+<p>Para não reler o Jira em cada atualização do painel, a aplicação guarda cada digest calculado <strong>na
+memória da instância da função Forge que o produziu</strong>:</p>
+<ul>
+<li>a chave combina a <strong>instalação</strong>, a chave do projeto e o limite de antiguidade;</li>
+<li>cada entrada vive no máximo <strong>60 segundos</strong>; a instância guarda no máximo <strong>50 entradas</strong>;</li>
+<li><strong>nunca é escrita no armazenamento da Atlassian, numa base de dados ou em disco</strong>;</li>
+<li>é descartada quando expira ou quando o runtime recicla a instância;</li>
+<li>se a instalação não puder ser identificada, <strong>nenhuma entrada é lida ou escrita</strong> (a aplicação
+falha fechada), pelo que dois sites com a mesma chave de projeto nunca partilham um digest.</li>
+</ul>
+<p>Como uma entrada em cache contém resumos e nomes de responsáveis, contém dados pessoais durante
+esses 60 segundos — apenas na memória da instância da própria instalação.</p>
+<h2 id="6-registos-de-diagnóstico">6. Registos de diagnóstico</h2>
+<p>A aplicação escreve linhas de registo curtas e estruturadas através do sistema de logs do Forge.
+Cada linha contém:</p>
+<ul>
+<li>o evento — digest servido, ação invocada, ou uma falha;</li>
+<li>a origem — <code>panel</code> ou <code>rovo</code>;</li>
+<li>um <strong>identificador de instalação com hash</strong> — os primeiros 12 caracteres hexadecimais de um hash
+SHA-256 do cloud ID do site (não o ID em claro);</li>
+<li>a <strong>chave do projeto</strong> Jira (por exemplo <code>MOBL</code>);</li>
+<li>páginas lidas, totais contados e se a leitura ficou completa;</li>
+<li>em caso de falha, um código de motivo e os <em>nomes</em> dos campos de contexto presentes — nunca os
+seus valores.</li>
+</ul>
+<p>A aplicação <strong>nunca registra</strong> chaves de issue, resumos, nomes de responsáveis, endereços de email,
+o cloud ID em claro, tokens ou conteúdos de pedidos.</p>
+<p>A Atlassian armazena estes registos e disponibiliza-os aos programadores da aplicação para
+diagnóstico; os administradores do site podem descarregá-los. A Atlassian conserva atualmente os
+registos da consola de programador durante 30 dias. Não os copiamos para nenhum sistema nosso.</p>
+<h2 id="7-rovo-e-funcionalidades-de-ia-da-atlassian">7. Rovo e funcionalidades de IA da Atlassian</h2>
+<p>O caminho do agente é opcional e só existe nos sites onde o Rovo está ativo.</p>
+<p>Quando utiliza o agente Context Digest, a sua mensagem é tratada pelo Rovo da Atlassian. A ação da
+aplicação devolve o digest — chaves de issue, resumos, estados, nomes de responsáveis e idades — para
+essa conversa, para que o agente responda com números reais. Esse conteúdo é depois tratado pelas
+funcionalidades de IA da Atlassian, ao abrigo dos <strong>termos e da política de privacidade da
+Atlassian</strong>. A aplicação não envia nada para o Rovo por iniciativa própria: é o agente que invoca a
+ação em resposta a um pedido.</p>
+<p>Onde o Rovo não está disponível ou está desativado, esta secção não se aplica e o painel funciona
+exatamente da mesma forma.</p>
+<h2 id="8-dados-pessoais-e-responsabilidade">8. Dados pessoais e responsabilidade</h2>
+<p>A aplicação pode tratar dados pessoais:</p>
+<ul>
+<li><strong>nomes de apresentação dos responsáveis</strong> — dados pessoais dos seus colegas;</li>
+<li><strong>resumos e estados dos issues</strong> — que podem conter dados pessoais se a equipa os escrever lá;</li>
+<li><strong>chave de projeto e identificador de instalação com hash</strong> — identificam um espaço de trabalho e
+não uma pessoa.</li>
+</ul>
+<p>Como funciona a responsabilidade na prática:</p>
+<ul>
+<li><strong>A sua organização</strong> — o administrador do site que instala a aplicação — controla o conteúdo do
+Jira e decide por que motivo e de que forma é utilizado. Continua a ser a parte responsável por
+esse conteúdo.</li>
+<li><strong>Nós</strong> lemos e resumimos o projeto apenas para disponibilizar a funcionalidade que o
+administrador instalou, e não decidimos as finalidades nem os meios do conteúdo Jira da sua
+organização.</li>
+<li><strong>Nós</strong> somos responsáveis pelos registos de diagnóstico descritos na secção 6, que existem para
+operar, proteger e diagnosticar a aplicação.</li>
+</ul>
+<p>Não vendemos dados pessoais, não os partilhamos com anunciantes ou intermediários de dados e não os
+utilizamos para treinar modelos de aprendizagem automática.</p>
+<h2 id="9-fundamentos-de-licitude">9. Fundamentos de licitude</h2>
+<p>Quando se aplica o RGPD:</p>
+<ul>
+<li><strong>Conteúdo do Jira</strong> (secções 2, 3, 5): a organização que instala a aplicação determina as
+finalidades e os meios dos seus dados do Jira, e aplica-se o fundamento de licitude que lhe
+corresponder nos termos do artigo 6.º. Tratamos esse conteúdo apenas por sua instrução, para
+disponibilizar o painel e as respostas do agente que ativou; nesse âmbito não definimos as
+finalidades desse tratamento.</li>
+<li><strong>Registos de diagnóstico</strong> (secção 6): artigo 6.º, n.º 1, alínea f) — os nossos interesses
+legítimos em operar, proteger e diagnosticar a aplicação. Os registos não contêm conteúdo de
+issues, nem nomes, e o identificador de instalação vai com hash, pelo que consideramos que esses
+interesses não se sobrepõem aos seus direitos e liberdades. Pode opor-se a este tratamento
+(secção 13).</li>
+</ul>
+<h2 id="10-transferências-internacionais-e-local-de-tratamento">10. Transferências internacionais e local de tratamento</h2>
+<p>A aplicação não envia dados para países terceiros nem para qualquer serviço nosso: corre dentro do
+Forge, contacta apenas APIs do Jira na mesma plataforma Atlassian e conserva dados apenas em
+memória durante 60 segundos. Não operamos servidores, não temos backend remoto e não usamos
+subcontratantes externos.</p>
+<p>A forma como a Atlassian trata dados ao nível da plataforma está fora do nosso controlo e não a
+apresentamos como compromisso nosso. A Atlassian indica que:</p>
+<ul>
+<li>o tratamento na plataforma Forge está coberto pelo <strong>Forge Data Processing Addendum</strong>, que
+incorpora as Cláusulas Contratuais-Tipo da UE e recorre ao EU-U.S. Data Privacy Framework quando
+aplicável;</li>
+<li>os locais de tratamento e as avaliações de impacto das transferências são documentados pela
+própria Atlassian.</li>
+</ul>
+<p>Referências:</p>
+<ul>
+<li><a href="https://developer.atlassian.com/platform/forge/about-the-forge-data-processing-addendum">https://developer.atlassian.com/platform/forge/about-the-forge-data-processing-addendum</a></li>
+<li><a href="https://www.atlassian.com/legal/data-processing-addendum">https://www.atlassian.com/legal/data-processing-addendum</a></li>
+</ul>
+<p>A aplicação <strong>não utiliza armazenamento persistente do Forge</strong>, pelo que a fixação de residência de
+dados da Atlassian — aplicável a esse armazenamento — não tem nada a fixar nesta aplicação: além da
+cache em memória de 60 segundos, a aplicação não conserva dados.</p>
+<h2 id="11-conservação">11. Conservação</h2>
+<table>
+<thead>
+<tr>
+<th>Dados</th>
+<th>Conservação</th>
+<th>Quem controla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digest calculado em memória</td>
+<td>no máximo 60 segundos, por instalação</td>
+<td>nós — fixado no código da aplicação</td>
+</tr>
+<tr>
+<td>Registos de diagnóstico</td>
+<td>a Atlassian indica que os registos estão disponíveis na consola de programador durante os últimos 30 dias; é a Atlassian que define e pode alterar esse prazo</td>
+<td>Atlassian</td>
+</tr>
+<tr>
+<td>Tudo o resto</td>
+<td>não é armazenado — a aplicação não tem base de dados, armazenamento de objetos nem chave-valor</td>
+<td>nós — não há nada a conservar</td>
+</tr>
+</tbody>
+</table>
+<p>Não copiamos os registos para nenhum sistema nosso, pelo que a conservação é a que a Atlassian
+aplica à plataforma Forge. Desinstalar a aplicação interrompe novo tratamento; a cache em memória
+expira por si e a aplicação não guarda mais nada.</p>
+<h2 id="12-segurança">12. Segurança</h2>
+<ul>
+<li>uma única permissão de leitura (<code>read:jira-work</code>), sem qualquer capacidade de escrita;</li>
+<li>partição da cache por instalação, que falha fechada em vez de arriscar misturar organizações;</li>
+<li>identificadores de instalação com hash nos registos e nenhum conteúdo registado;</li>
+<li>nenhuma credencial, chave de API ou segredo guardado na aplicação;</li>
+<li>nenhum armazenamento de dados para proteger, porque não é usado.</li>
+</ul>
+<p>Nenhum sistema é perfeitamente seguro. Se acredita ter encontrado um problema de segurança,
+contacte-nos pelo endereço abaixo antes de o divulgar publicamente.</p>
+<h2 id="13-os-seus-direitos">13. Os seus direitos</h2>
+<p>Nos termos da lei aplicável, pode pedir o acesso, a retificação ou o apagamento dos seus dados
+pessoais, limitar ou opor-se ao tratamento, ou solicitar a portabilidade. Escreva para
+<strong><a href="mailto:comercial@lumiaproai.com">comercial@lumiaproai.com</a></strong>.</p>
+<p>Duas notas práticas: os pedidos sobre <strong>conteúdo do Jira</strong> (resumos, atribuições) são normalmente
+melhor dirigidos ao <strong>administrador do seu site</strong>, que controla esse conteúdo; e se estiver no EEE
+ou no Reino Unido pode também apresentar reclamação à autoridade de controlo competente (em
+Portugal, a CNPD — <a href="https://www.cnpd.pt">www.cnpd.pt</a>).</p>
+<h2 id="14-crianças">14. Crianças</h2>
+<p>O Context Digest é uma ferramenta empresarial para equipas de software. Não se dirige a crianças e
+não tratamos conscientemente dados de crianças.</p>
+<h2 id="15-alterações-a-esta-política">15. Alterações a esta política</h2>
+<p>Se o comportamento da aplicação mudar, atualizaremos esta página e a respetiva data de entrada em
+vigor. As alterações materiais serão anunciadas aqui antes de produzirem efeitos.</p>
+<h2 id="16-contacto">16. Contacto</h2>
+<p><strong>Lumia Pro AI</strong> — projeto de Hugo Miguel Morais Lopes
+Email: <strong><a href="mailto:comercial@lumiaproai.com">comercial@lumiaproai.com</a></strong></p>
+<hr>
+<p><em>O Context Digest é uma aplicação para o Atlassian Jira, construída em Atlassian Forge. Atlassian,
+Jira e Rovo são marcas da Atlassian Pty Ltd. Esta política abrange apenas a aplicação; a utilização
+do Jira e do Rovo é também regida pelos termos e pela política de privacidade da Atlassian.</em></p> </article> </main>  </body> </html>
